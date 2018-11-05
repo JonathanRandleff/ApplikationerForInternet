@@ -1,0 +1,202 @@
+body {
+background: #fff url(../img/food2.jpg) ;
+font-family: Times New Roman,verdana, arial, Trebuchet MS;
+font-size: 80%;
+color: #b0b0b0;
+    text-align: center;
+}
+
+*{
+margin: 0px;
+padding: 0px;
+    text-align: center;
+}
+h2	   {
+    color: #F26F29;
+    width: 400px;
+    text-transform: uppercase;
+    font-family: Verdana, arial;
+    font-size: 1.2em;
+    background: #333 repeat-x bottom;}
+
+
+#sitebox {
+    background: #333;
+border: 1px solid #333;
+}
+
+
+#header {
+background: #333;
+height: 60px;
+text-align: center;
+border-bottom-style: solid;
+border-color: grey;
+}
+
+#header h1 {
+margin-left: 10px;
+color: #96B766;
+font-size: 4em;}
+
+.navigation ul {
+    background-color: #333;
+    text-align: center;
+    border-bottom-style: solid;
+    border-color: grey;
+}
+
+.navigation li {
+    display: inline-block;
+    background: #333;
+}
+
+.navigation li a, .dropbtn {
+    font-family: Verdana, arial;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navigation li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.navigation li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: red;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content {
+    width: 400px;
+    margin: 0 auto;
+    line-height: 17px;
+    text-align: center;
+    background: #333;
+}
+
+.content h2	   {
+    color: #F26F29;
+    width: 400px;
+    text-transform: uppercase;
+    font-family: Verdana, arial;
+    font-size: 1.2em;
+    background: #333 repeat-x bottom;}
+
+.content p{
+    width: 400px;
+    color: #a0a0a0;
+    font-family: Verdana, arial;
+    margin-top: 5px;
+    font-size: 0.9em;
+    margin-left: 0px;}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: repeat(7, auto);
+    grid-template-rows: 30px auto auto auto;
+    background: #333;
+    padding: 10px;
+}
+.grid-item {
+    width: 120px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: left;
+    padding: 5px;
+    color: #a0a0a0;
+    font-size: 1.1em;
+    font-family: Verdana, arial;
+}
+.img {
+    text-align: center;
+}
+
+.grid-item2 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: black;
+    font-size: 1.3em;
+    font-family: Verdana, arial;
+    padding: 5px;
+}
+.ingredient-container {
+    vertical-align: top;
+    display:inline-block;
+    width: 400px;
+    line-height: 17px;
+    text-align: center;
+    background: #333;
+}
+.ingredients li
+{
+    list-style-position: inside;
+    width: 400px;
+    line-height: 17px;
+    list-style-type: disc;
+    text-align: center;
+    background: #333;
+}
+.instructions-container {
+    vertical-align: top;
+    display:inline-block;
+    width: 400px;
+    line-height: 17px;
+    text-align: center;
+    background: #333;
+}
+.instructions li {
+    width: 400px;
+    line-height: 17px;
+    text-align: center;
+    background: #333;
+    list-style-type: decimal;
+    list-style-position: inside;
+
+}
+.comments-container {
+    vertical-align: bottom;
+    width: 400px;
+    line-height: 17px;
+    text-align: center;
+    background: #333;
+    margin: auto;
+}
+.comments li {
+    width: 400px;
+    line-height: 25px;
+    text-align: center;
+    background: #333;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
