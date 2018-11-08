@@ -12,23 +12,14 @@
     font-size: 4em;
 }
 
-.navigation ul {
-    background-color: #333;
-    text-align: center;
-    border-bottom-style: solid;
-    border-color: grey;
-}
-
 .navigation li {
     display: inline-block;
-    background: #333;
+    font-family: Verdana, arial;
 }
 
 .navigation li a, .dropbtn {
-    font-family: Verdana, arial;
     display: inline-block;
     color: white;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -44,6 +35,8 @@
 .dropdown-content {
     display: none;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     background-color: #333;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
