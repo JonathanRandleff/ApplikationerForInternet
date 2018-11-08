@@ -2,6 +2,7 @@
 echo '
 <link rel="stylesheet" type="text/css" href="css/reset.css"/>
 <link rel="stylesheet" type="text/css" href="css/menu.css"/>
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
   <!--Header-->
   <div id="header">
     <h1>Tasty Recipes</h1>

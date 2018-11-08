@@ -4,6 +4,14 @@
     text-align: center;
 }
 
+body {
+    background: #fff url(../img/food2.jpg) ;
+    font-family: Times New Roman,verdana, arial, Trebuchet MS;
+    font-size: 80%;
+    color: #b0b0b0;
+    text-align: center;
+}
+
 #topbox {
     background: #333;
 }
