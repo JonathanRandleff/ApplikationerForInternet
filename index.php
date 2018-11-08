@@ -13,7 +13,7 @@
 <body>
 
 <!--Header and Navigation-->
-<div id="sitebox">
+<div id="topbox">
   <?php include 'menu.php'?>
 </div>
 
@@ -24,7 +24,6 @@
   <p>You should also check out our calendar at the navigation bar. There you will find a calendar
   with chosen recipes for days</p>
 </div>
-
 
 </body>
 </html>

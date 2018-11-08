@@ -13,7 +13,7 @@
 <body>
 
 <!--Header and Navigation-->
-<div id="sitebox">
+<div id="topbox">
     <?php include 'menu.php'?>
 </div>
 
@@ -21,8 +21,8 @@
 <div class="content recipe">
     <h2>Pancakes Recipe:</h2>
 <div class="ingredient-container">
+    <h2>Ingredients:</h2>
     <ul class="ingredients">
-        <h2>Ingredients:</h2>
         <li>1 1/2 cups all-purpose flour</li>
         <li>3 1/2 teaspoons baking powder</li>
         <li>1 teaspoon salt</li>
@@ -47,7 +47,7 @@
 <div class ="comments-container">
     <h2>Comments:</h2>
     <ul class="comments">
-        <li>Karin: Pancakes <3</li>
+        <li>Karin: Best pancake recipe!</li>
         <li>Olof: Damn, the best pancakes I've ever tasted.</li>
     </ul>
 </div>

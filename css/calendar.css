@@ -4,6 +4,7 @@
     grid-template-rows: 30px auto auto auto;
     background: #333;
     padding: 10px;
+    font-family: Verdana, arial;
 }
 .grid-top {
     background-color: rgba(255, 255, 255, 0.8);
@@ -11,7 +12,6 @@
     text-align: center;
     color: black;
     font-size: 1.3em;
-    font-family: Verdana, arial;
     padding: 5px;
 }
 .grid-item {
@@ -23,7 +23,6 @@
     padding: 5px;
     color: #a0a0a0;
     font-size: 1.1em;
-    font-family: Verdana, arial;
 }
 .img {
     text-align: center;

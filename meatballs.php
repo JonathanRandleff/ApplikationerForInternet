@@ -13,7 +13,7 @@
 <body>
 
 <!--Header and Navigation-->
-<div id="sitebox">
+<div id="topbox">
     <?php include 'menu.php'?>
 </div>
 

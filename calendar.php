@@ -13,7 +13,7 @@
 <body>
 
 <!--Header and Navigation-->
-<div id="sitebox">
+<div id="topbox">
     <?php include 'menu.php'?>
 </div>
 
@@ -36,7 +36,7 @@
     <div class="grid-item">7</div>
     <div class="grid-item">8
        <div class="img">
-           <a href="meatballs.html"><img src="img/meatballs.png" height="60" width="60" alt="Meatballs"/></a></div>
+           <a href="meatballs.php"><img src="img/meatballs.png" height="60" width="60" alt="Meatballs"/></a></div>
     </div>
     <div class="grid-item">9</div>
     <div class="grid-item">10</div>
@@ -51,7 +51,7 @@
     <div class="grid-item">19</div>
     <div class="grid-item">20
         <div class="img">
-            <a href="pancakes.html"><img src="img/pancakes.png" height="60" width="60" alt="Pancakes"/></a></div>
+            <a href="pancakes.php"><img src="img/pancakes.png" height="60" width="60" alt="Pancakes"/></a></div>
     </div>
     <div class="grid-item">21</div>
     <div class="grid-item">22</div>
