@@ -7,33 +7,17 @@
   <meta http-equiv="content-type" content="application/xhtml; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="css/reset.css"/>
   <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    <link rel="stylesheet" type="text/css" href="css/recipe.css"/>
 </head>
 
 <body>
-<div id="sitebox">
-  <!--Header-->
-  <div id="header">
-    <h1>Tasty Recipes</h1>
-  </div>
 
-  <!--Navigation-->
-  <ul class="navigation">
-    <li><a href="index.html">Home</a></li>
-    <li class="dropdown">
-      <a class="dropbtn">Recipes</a>
-      <div class="dropdown-content">
-        <a href="meatballs.html">Meatballs</a>
-        <a href="pancakes.html">Pancakes</a>
-      </div>
-    </li>
-      <li class="dropdown">
-      <a href="calendar.html">Calendar</a>
-    </li>
-  </ul>
+<!--Header and Navigation-->
+<div id="sitebox">
+  <?php include 'menu.php'?>
 </div>
 
 <!--Content-->
-
 <div class="content">
   <h2>Welcome to Tasty Recipes</h2>
   <p>Hello and welcome to Tasty Recipes, here you will find a collection of tasty recipes.</p>

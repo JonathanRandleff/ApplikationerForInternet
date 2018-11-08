@@ -3,39 +3,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-AU">
 <head>
-  <title>Tasty Recipes</title>
-  <meta http-equiv="content-type" content="application/xhtml; charset=UTF-8" />
-  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-  <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    <title>Tasty Recipes - Meatballs Recipe</title>
+    <meta http-equiv="content-type" content="application/xhtml; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/recipe.css"/>
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
 </head>
 
 <body>
-<div id="sitebox">
-  <!--Header-->
-  <div id="header">
-    <h1>Tasty Recipes</h1>
-  </div>
 
-  <!--Navigation-->
-  <ul class="navigation">
-    <li><a href="index.html">Home</a></li>
-    <li class="dropdown">
-      <a class="dropbtn">Recipes</a>
-      <div class="dropdown-content">
-        <a href="meatballs.html">Meatballs</a>
-        <a href="pancakes.html">Pancakes</a>
-      </div>
-    </li>
-    <li class="dropdown">
-      <a href="calendar.html">Calendar</a>
-    </li>
-  </ul>
+<!--Header and Navigation-->
+<div id="sitebox">
+    <?php include 'menu.php'?>
 </div>
 
 <!--Content-->
-<div class="content">
+<div class="content recipe">
     <h2>Meatballs Recipe:</h2>
-</div>
 <div class="ingredient-container">
     <h2>Ingredients:</h2>
     <ul class="ingredients">
@@ -75,13 +59,13 @@
             Serve over egg noodles or rice.</li>
     </ul>
 </div>
-<div class ="center comments-container">
+<div class ="comments-container">
     <h2>Comments:</h2>
     <ul class="comments">
         <li>Per: Best Recipe ever!</li>
         <li>Lisa: The best meatballs I have ever tasted.</li>
     </ul>
 </div>
-
+</div>
 </body>
 </html>

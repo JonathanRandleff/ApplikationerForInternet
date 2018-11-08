@@ -1,0 +1,37 @@
+.ingredient-container {
+    display:inline-block;
+    float: left;
+    width: 50%;
+}
+.ingredients li {
+    list-style-position: inside;
+    list-style-type: disc;
+    line-height: 17px;
+}
+.instructions-container {
+    display:inline-block;
+    float: left;
+    width: 50%;
+}
+.instructions li {
+    list-style-type: decimal;
+    list-style-position: inside;
+    line-height: 17px;
+    margin: 10px 0;
+
+}
+.comments-container {
+    display: inline-block;
+    width: 51%;
+}
+.comments li {
+    line-height: 25px;
+    text-align: center;
+}
+.content.recipe  {
+    width: 66%;
+    line-height: 17px;
+    text-align: center;
+    background: #333;
+    margin: auto;
+}

@@ -3,44 +3,29 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-AU">
 <head>
-    <title>Tasty Recipes</title>
+    <title>Tasty Recipes - Calendar</title>
     <meta http-equiv="content-type" content="application/xhtml; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/calendar.css"/>
     <link rel="stylesheet" type="text/css" href="css/css.css"/>
 </head>
 
 <body>
-<div id="sitebox">
-    <!--Header-->
-    <div id="header">
-        <h1>Tasty Recipes</h1>
-    </div>
 
-    <!--Navigation-->
-    <ul class="navigation">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-            <a class="dropbtn">Recipes</a>
-            <div class="dropdown-content">
-                <a href="meatballs.html">Meatballs</a>
-                <a href="pancakes.html">Pancakes</a>
-            </div>
-        </li>
-        <li class="dropdown">
-            <a href="calendar.html">Calendar</a>
-        </li>
-    </ul>
+<!--Header and Navigation-->
+<div id="sitebox">
+    <?php include 'menu.php'?>
 </div>
 
 <!--Content-->
 <div class="grid-container">
-    <div class="grid-item2"><b>Monday</b></div>
-    <div class="grid-item2"><b>Tuesday</b></div>
-    <div class="grid-item2"><b>Wednesday</b></div>
-    <div class="grid-item2"><b>Thursday</b></div>
-    <div class="grid-item2"><b>Friday</b></div>
-    <div class="grid-item2"><b>Saturday</b></div>
-    <div class="grid-item2"><b>Sunday</b></div>
+    <div class="grid-top"><b>Monday</b></div>
+    <div class="grid-top"><b>Tuesday</b></div>
+    <div class="grid-top"><b>Wednesday</b></div>
+    <div class="grid-top"><b>Thursday</b></div>
+    <div class="grid-top"><b>Friday</b></div>
+    <div class="grid-top"><b>Saturday</b></div>
+    <div class="grid-top"><b>Sunday</b></div>
     <div class="grid-item"></div>
     <div class="grid-item">1</div>
     <div class="grid-item">2</div>

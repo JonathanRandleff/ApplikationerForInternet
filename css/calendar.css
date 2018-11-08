@@ -1,0 +1,30 @@
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: repeat(7, auto);
+    grid-template-rows: 30px auto auto auto;
+    background: #333;
+    padding: 10px;
+}
+.grid-top {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: black;
+    font-size: 1.3em;
+    font-family: Verdana, arial;
+    padding: 5px;
+}
+.grid-item {
+    width: 120px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: left;
+    padding: 5px;
+    color: #a0a0a0;
+    font-size: 1.1em;
+    font-family: Verdana, arial;
+}
+.img {
+    text-align: center;
+}
