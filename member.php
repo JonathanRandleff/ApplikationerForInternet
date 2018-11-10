@@ -18,10 +18,13 @@
 
 <!--Content-->
 <div class="content">
-  <h2>Welcome to Tasty Recipes</h2>
-  <p>Hello and welcome to Tasty Recipes, here you will find a collection of tasty recipes.</p>
-  <p>You should also check out our calendar at the navigation bar. There you will find a calendar
-  with chosen recipes for days</p>
+  <h2>Welcome
+      <?php
+      echo $_SESSION["username"];
+      ?>
+  </h2>
+  <p>You are now logged in</p>
+    <p>One of the perks of being a logged in member is the ability to comment on the recipes.</p>
 </div>
 
 </body>
