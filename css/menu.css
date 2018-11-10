@@ -5,6 +5,9 @@
     border-bottom-style: solid;
     border-color: grey;
 }
+#header a {
+    text-decoration: none;
+}
 
 #header h1 {
     margin-left: 10px;

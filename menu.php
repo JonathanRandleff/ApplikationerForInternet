@@ -8,7 +8,9 @@ session_start();
 <link rel="stylesheet" type="text/css" href="css/css.css"/>
   <!--Header-->
   <div id="header">
-    <h1>Tasty Recipes</h1>
+      <a href="index.php">
+          <h1>Tasty Recipes</h1>
+      </a>
       <?php
       if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
           echo 'Logged in as: ';

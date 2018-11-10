@@ -19,7 +19,7 @@
 
 <!--Content-->
 <div class="content">
-  <h2>Register</h2>
+  <h2>Sign up</h2>
     <form action="registerHandler.php" method="post"
         <div class="form-login">
             <label for="username"><b>Username</b></label>
@@ -31,7 +31,7 @@
             <label for="password2"><b>Confirm Password</b></label>
             <input type="password" placeholder="Confirm Password" name="password2" required>
 
-            <button type="submit">Login</button>
+            <button type="submit">Sign up</button>
         </div>
     </form>
 </div>

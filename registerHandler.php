@@ -24,7 +24,8 @@ include_once 'config.php';
 
     if ($link->query($sql) === TRUE) {
         Header("Location: login.php?success=1");
-    } else {
+    }
+    else {
         echo "Error: " . $sql . "<br>" . $link->error;
     }
 ?>
