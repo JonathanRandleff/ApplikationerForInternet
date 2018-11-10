@@ -19,8 +19,8 @@
 
 <!--Content-->
 <div class="content">
-  <h2>Login Page</h2>
-    <form action="loginHandler.php" method="post"
+  <h2>Register</h2>
+    <form action="registerHandler.php" method="post"
         <div class="form-login">
             <label for="username"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="username" required>
@@ -28,7 +28,9 @@
             <label for="password"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="password" required>
 
-            <p><a href="register.php">Don't have an account? Register here</a></p>
+            <label for="password2"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="password2" required>
+
             <button type="submit">Login</button>
         </div>
     </form>
@@ -36,14 +38,13 @@
 
 </body>
 </html>
-
 <?php
-if ( isset($_GET['success']) && $_GET['success'] == 0 )
+if ( isset($_GET['match']) && $_GET['match'] == 0 )
 {
-    echo "<script type='text/javascript'>alert('Wrong username or password');</script>";
+    echo "<script type='text/javascript'>alert('Password does not match, try again');</script>";
 }
-if ( isset($_GET['success']) && $_GET['success'] == 1 )
+if ( isset($_GET['taken']) && $_GET['taken'] == 1 )
 {
-    echo "<script type='text/javascript'>alert('Registration successful! You can now log in');</script>";
+    echo "<script type='text/javascript'>alert('Username already taken, try again');</script>";
 }
 ?>
