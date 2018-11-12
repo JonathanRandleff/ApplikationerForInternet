@@ -24,10 +24,42 @@
     display: inline-block;
     width: 51%;
 }
-.comments li {
+.comments li a {
+    line-height: 25px;
+    text-align: center;
+    color: red;
+}
+.comments li b {
     line-height: 25px;
     text-align: center;
 }
 .content.recipe  {
     width: 66%;
+}
+.form-comments {
+    line-height: 17px;
+    font-family: Verdana, arial;
+
+}
+input[type=text] {
+    width: 100%;
+    height: 68px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+}
+button {
+    background-color: #4CAF50;
+    color: #333;
+    padding: 7px 10px;
+    margin: 4px 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
 }

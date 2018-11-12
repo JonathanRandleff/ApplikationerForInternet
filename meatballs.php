@@ -61,11 +61,33 @@
 </div>
 <div class ="comments-container">
     <h2>Comments:</h2>
-    <ul class="comments">
-        <li>Per: Best Recipe ever!</li>
-        <li>Lisa: The best meatballs I have ever tasted.</li>
-    </ul>
+    <?php
+    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+        echo '    
+    <form action="commentHandler.php" method="post"
+    <div class="form-comments">
+        <input type="text" placeholder="Write comment here..." name="meatballsComment" required>
+
+        <button type="submit">Submit</button>
+    </div>
+    </form>';
+    }
+    else {
+        echo 'You have to be logged in to write comments';
+    }
+    ?>
+
+    <div class="comments">
+      <?php include 'meatballsComment.php'?>
+    </div>
 </div>
 </div>
 </body>
 </html>
+
+<?php
+if ( isset($_GET['comment']) && $_GET['comment'] == 1 )
+{
+    echo "<script type='text/javascript'>alert('Comment added');</script>";
+}
+?>
