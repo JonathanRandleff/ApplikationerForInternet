@@ -58,6 +58,10 @@ button {
     border: none;
     cursor: pointer;
 }
+.delete {
+    font-size: 0.7em;
+    width: 5%;
+}
 
 /* Add a hover effect for buttons */
 button:hover {

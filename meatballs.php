@@ -84,10 +84,3 @@
 </div>
 </body>
 </html>
-
-<?php
-if ( isset($_GET['comment']) && $_GET['comment'] == 1 )
-{
-    echo "<script type='text/javascript'>alert('Comment added');</script>";
-}
-?>

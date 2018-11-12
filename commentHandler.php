@@ -12,7 +12,7 @@ $username = $_SESSION["username"];
     VALUES ('$meatballsComment','$username')";
 
         if ($link->query($sql) === TRUE) {
-            Header("Location: meatballs.php?comment=1");
+            Header("Location: meatballs.php");
         }
         else {
             echo "Error: " . $sql . "<br>" . $link->error;
@@ -24,7 +24,7 @@ $username = $_SESSION["username"];
     VALUES ('$pancakesComment', '$username')";
 
         if ($link->query($sql) === TRUE) {
-            Header("Location: pancakes.php?comment=1");
+            Header("Location: pancakes.php");
         }
         else {
             echo "Error: " . $sql . "<br>" . $link->error;
