@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<cookbook version="46">
+    <recipe>
+    <title>Meatballs</title>
+    <preptime>10 min</preptime>
+    <cooktime>20 min</cooktime>
+    <totaltime>30 min</totaltime>
+    <description>Delicious meatballs</description>
+        <ingredient>
+            <li>1 pound ground beef</li>
+            <li>¼ cup panko bread crumbs</li>
+            <li>1 tablespoon parsley, chopped</li>
+            <li>¼ teaspoon ground allspice</li>
+            <li>¼ teaspoon ground nutmeg</li>
+            <li>¼ cup onion, finely chopped</li>
+            <li>½ teaspoon Garlic Powder</li>
+            <li>⅛ teaspoon Pepper</li>
+            <li>½ teaspoon salt</li>
+            <li>1 egg</li>
+            <li>1 tbsp. olive oil</li>
+            <li>5 tbsp. butter</li>
+            <li>3 tbsp. flour</li>
+            <li>2 cups beef broth</li>
+            <li>1 cup heavy cream</li>
+            <li>1 Tablespoon Worcestershire sauce</li>
+            <li>1 tsp. Dijon mustard</li>
+            <li>salt and pepper to taste</li>
+        </ingredient>
+        <recipetext>
+            <li>In a medium sized bowl combine ground beef, panko, parsley, allspice,
+                nutmeg, onion, garlic powder, pepper, salt and egg. Mix until combined.</li>
+            <li>Roll into 12 large meatballs or 20 small meatballs.
+                In a large skillet heat olive oil and 1 Tablespoon butter. Add the meatballs and cook turning continuously
+                until brown on each side and cooked throughout. Transfer to a plate and cover with foil.</li>
+            <li>Add 4 Tablespoons butter and flour to skillet and whisk until it turns brown. Slowly stir in beef broth
+                and heavy cream. Add worchestershire sauce and dijon mustard and bring to a simmer until sauce starts
+                to thicken. Salt and pepper to taste.</li>
+            <li>Add the meatballs back to the skillet and simmer for another 1-2 minutes.
+                Serve over egg noodles or rice.</li>
+        </recipetext>
+    <url>meatballs.php</url>
+    <video></video>
+    <quantity>6</quantity>
+    <imagepath></imagepath>
+    <imageurl></imageurl>
+    <comments></comments>
+    <source></source>
+    <video></video>
+    <nutrition>
+        <li></li>
+    </nutrition>
+    <rating>5</rating>
+    <category>category 1</category>
+    <category>category 2</category>
+    </recipe>
+
+
+    <recipe>
+        <title>Pancakes</title>
+        <preptime>5 min</preptime>
+        <cooktime>15 min</cooktime>
+        <totaltime>20 min</totaltime>
+        <description>Delicious Pancakes</description>
+        <ingredient>
+            <li>1 1/2 cups all-purpose flour</li>
+            <li>3 1/2 teaspoons baking powder</li>
+            <li>1 teaspoon salt</li>
+            <li>1 tablespoon white sugar</li>
+            <li>1 1/4 cups milk</li>
+            <li>1 egg</li>
+            <li>3 tablespoons butter, melted</li>
+        </ingredient>
+        <recipetext>
+            <li>In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and
+                pour in the milk, egg and melted butter; mix until smooth.</li>
+            <li>Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle,
+                using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</li>
+        </recipetext>
+        <url>pancakes.php</url>
+        <video></video>
+        <quantity>8</quantity>
+        <imagepath></imagepath>
+        <imageurl></imageurl>
+        <comments></comments>
+        <source></source>
+        <video></video>
+        <nutrition>
+            <li>158 cal</li>
+        </nutrition>
+        <rating>5</rating>
+        <category>category 1</category>
+        <category>category 2</category>
+    </recipe>
+
+</cookbook>

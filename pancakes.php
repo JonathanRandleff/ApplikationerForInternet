@@ -19,18 +19,22 @@
 
 <!--Content-->
 <div class="content recipe">
-    <h2>Pancakes Recipe:</h2>
+    <?php
+    $xml=simplexml_load_file("cookbook.xml") or die("Error: Cannot create object");
+    ?>
+    <h2>
+        <?php echo $xml->recipe[1]->title; ?>
+        Recipe:
+    </h2>
 <div class="ingredient-container">
     <h2>Ingredients:</h2>
     <ul class="ingredients">
-        <li>1 1/2 cups all-purpose flour</li>
-        <li>3 1/2 teaspoons baking powder</li>
-        <li>1 teaspoon salt</li>
-        <li>1 tablespoon white sugar</li>
-        <li>1 1/4 cups milk</li>
-        <li>1 egg</li>
-        <li>3 tablespoons butter, melted</li>
-        <li>1 pound ground beef</li>
+        <?php
+        foreach($xml->recipe[1]->ingredient->li as $key => $value)
+        {
+            echo "<li>" . $value . "</li>";
+        }
+        ?>
     </ul>
 </div>
 
@@ -38,10 +42,12 @@
 <div class="instructions-container">
     <h2>Instructions</h2>
     <ul class="instructions">
-        <li>In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and
-            pour in the milk, egg and melted butter; mix until smooth.</li>
-        <li>Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle,
-            using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</li>
+        <?php
+        foreach($xml->recipe[1]->recipetext->li as $key => $value)
+        {
+            echo "<li>" . $value . "</li>";
+        }
+        ?>
     </ul>
 </div>
 <div class ="comments-container">
