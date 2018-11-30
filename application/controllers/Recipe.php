@@ -12,18 +12,16 @@ class Recipe extends CI_Controller {
             // Whoops, we don't have a page for that!
             show_404();
         }
-
+        $data['recipe'] = $this->recipe->retrieveRecipe();
         $data['comment'] = $this->recipe->retrieveComment($page);
         $this->load->view('templates/header', $data);
         $this->load->view('recipe/'.$page, $data);
     }
 
     public function deleteComment() {
-        // post values
-        $id = $this->input->post('id');
-        $page = $this->input->post('page');
+        $id = htmlentities($this->input->post('id'), ENT_QUOTES);
+        $page = htmlentities($this->input->post('page'), ENT_QUOTES);
 
-        // insert values in database
         $this->recipe->deleteComment($page, $id);
         redirect(base_url().'recipe/view/'.$page);
     }
@@ -37,14 +35,13 @@ class Recipe extends CI_Controller {
         }
         else
         {
-            // post values
-            $username = $this->session->userdata('username');
-            $comment_text = $this->input->post('comment_text');
-            $recipe = $this->input->post('recipe');
-            // set post values
+            $username = htmlentities($this->session->userdata('username'), ENT_QUOTES);
+            $comment_text = htmlentities($this->input->post('comment_text'), ENT_QUOTES);
+            $recipe = htmlentities($this->input->post('recipe'), ENT_QUOTES);
+
             $this->recipe->setUsername($username);
             $this->recipe->setCommentText($comment_text);
-            // insert values in database
+
             $this->recipe->addComment($recipe);
             redirect(base_url().'recipe/view/'.$recipe);
         }

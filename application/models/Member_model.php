@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Member_model extends CI_Model
 {
-    // declare private variable
     private $_userID;
     private $_userName;
     private $_password;
@@ -45,14 +44,24 @@ class Member_model extends CI_Model
 
     function login()
     {
-        $this->db->select('id');
+        $this->db->select('password');
         $this->db->from('user');
         $this->db->where('username', $this->_userName);
-        $this->db->where('password', $this->_password);
         $this->db->limit(1);
-        $query = $this->db->get();
-        if ($query->num_rows() == 1) {
-            return $query->result();
+        $hash = $this->db->get()->row()->password;
+
+        if (password_verify($this->_password, $hash)) {
+
+            $this->db->select('id');
+            $this->db->from('user');
+            $this->db->where('username', $this->_userName);
+            $this->db->limit(1);
+            $query = $this->db->get();
+            if ($query->num_rows() == 1) {
+                return $query->result();
+            } else {
+                return false;
+            }
         } else {
             return false;
         }

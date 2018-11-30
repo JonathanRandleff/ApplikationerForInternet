@@ -35,9 +35,11 @@ class Recipe_model extends CI_Model {
     public function retrieveComment($recipe){
 
         return $this->db->get($recipe.'_comment')->result();
-
     }
-
+    public function retrieveRecipe () {
+        $xml=simplexml_load_file(base_url()."assets/xml/cookbook.xml") or die("Error: Cannot create object");
+        return $xml;
+    }
 
 
 

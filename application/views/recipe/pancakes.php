@@ -16,18 +16,15 @@
 
 <!--Content-->
 <div class="content recipe">
-    <?php
-    $xml=simplexml_load_file(base_url()."assets/xml/cookbook.xml") or die("Error: Cannot create object");
-    ?>
     <h2>
-        <?php echo $xml->recipe[1]->title; ?>
+        <?php echo $recipe->recipe[1]->title; ?>
         Recipe:
     </h2>
 <div class="ingredient-container">
     <h2>Ingredients:</h2>
     <ul class="ingredients">
         <?php
-        foreach($xml->recipe[1]->ingredient->li as $key => $value)
+        foreach($recipe->recipe[1]->ingredient->li as $key => $value)
         {
             echo "<li>" . $value . "</li>";
         }
@@ -40,7 +37,7 @@
     <h2>Instructions</h2>
     <ul class="instructions">
         <?php
-        foreach($xml->recipe[1]->recipetext->li as $key => $value)
+        foreach($recipe->recipe[1]->recipetext->li as $key => $value)
         {
             echo "<li>" . $value . "</li>";
         }

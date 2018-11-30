@@ -43,8 +43,8 @@ class Member extends CI_Controller {
         else
         {
             // post values
-            $username = $this->input->post('username');
-            $password = $this->input->post('password');
+            $username = htmlentities($this->input->post('username'), ENT_QUOTES);
+            $password = htmlentities(password_hash($this->input->post('password'), PASSWORD_DEFAULT), ENT_QUOTES);
             // set post values
             $this->user->setUserName($username);
             $this->user->setPassword($password);
@@ -67,18 +67,16 @@ class Member extends CI_Controller {
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
         if($this->form_validation->run() == FALSE) {
-            //Field validation failed.  User redirected to login page
+
             $this->load->view('member/login');
         } else {
-            $sessArray = array();
-            //Field validation succeeded.  Validate against database
-            $username = $this->input->post('username');
-            $password = $this->input->post('password');
+
+            $username = htmlentities($this->input->post('username'), ENT_QUOTES);
+            $password = htmlentities($this->input->post('password'), ENT_QUOTES);
 
             $this->user->setUserName($username);
             $this->user->setPassword($password);
 
-            //query the database
             $result = $this->user->login();
 
             if($result) {
