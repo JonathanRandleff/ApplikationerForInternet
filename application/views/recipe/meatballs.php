@@ -51,7 +51,7 @@
     <h2>Comments:</h2>
 
     <?php echo validation_errors(); ?>
-    <?php echo form_open('comment/createComment'); ?>
+    <?php echo form_open('recipe/createComment'); ?>
 
     <?php
     if ($this->session->userdata('is_authenticated') == TRUE) {
@@ -70,6 +70,21 @@
     ?>
 
     <div class="comments">
+        <?php
+        foreach($comment as $comment) {
+            echo "<p style='color:#F26F29;'>".$comment->username."</p>";
+            echo $comment->comment_text;
+            if ($comment->username === $this->session->userdata('username')) {
+                $id = $comment->id;
+                echo form_open('recipe/deleteComment').'
+            <input type="hidden" name="id" value="'.$id.'">
+            <input type="hidden" name="page" value="meatballs">
+            <input type="submit" class="delete" name="button" value="Delete"/>
+            </form>';
+            }
+            echo "<br />";
+        }
+        ?>
     </div>
 </div>
 </div>

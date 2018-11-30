@@ -10,9 +10,9 @@
         <h1>Tasty Recipes</h1>
     </a>
     <?php
-    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    if ($this->session->userdata('is_authenticated') == TRUE) {
         echo 'Logged in as: ';
-        echo $_SESSION["username"];
+        echo $this->session->userdata('username');
     }
     ?>
 </div>
@@ -23,8 +23,8 @@
     <li class="dropdown">
         <a class="dropbtn">Recipes</a>
         <div class="dropdown-content">
-            <a href="<?php echo base_url();?>meatballs">Meatballs</a>
-            <a href="<?php echo base_url();?>pancakes">Pancakes</a>
+            <a href="<?php echo base_url();?>recipe/view/meatballs">Meatballs</a>
+            <a href="<?php echo base_url();?>recipe/view/pancakes">Pancakes</a>
         </div>
     </li>
     <li><a href="<?php echo base_url();?>calendar">Calendar</a></li>

@@ -31,7 +31,7 @@
     <div class="grid-item">7</div>
     <div class="grid-item">8
        <div class="img">
-           <a href="<?php echo base_url();?>meatballs"><img src="/assets/img/meatballs.png" height="60" width="60" alt="Meatballs"/></a></div>
+           <a href="<?php echo base_url();?>recipe/view/meatballs"><img src="/assets/img/meatballs.png" height="60" width="60" alt="Meatballs"/></a></div>
     </div>
     <div class="grid-item">9</div>
     <div class="grid-item">10</div>
@@ -46,7 +46,7 @@
     <div class="grid-item">19</div>
     <div class="grid-item">20
         <div class="img">
-            <a href="<?php echo base_url();?>pancakes"><img src="/assets/img/pancakes.png" height="60" width="60" alt="Pancakes"/></a></div>
+            <a href="<?php echo base_url();?>recipe/view/pancakes"><img src="/assets/img/pancakes.png" height="60" width="60" alt="Pancakes"/></a></div>
     </div>
     <div class="grid-item">21</div>
     <div class="grid-item">22</div>

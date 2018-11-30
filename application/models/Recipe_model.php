@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Comment_model extends CI_Model {
+class Recipe_model extends CI_Model {
 
     private $_comment_text;
     private $_username;
@@ -17,6 +17,11 @@ class Comment_model extends CI_Model {
     }
 
 
+    public function deleteComment($recipe, $comment_id) {
+        $this->db->delete($recipe.'_comment', array('id' => $comment_id));
+    }
+
+
     public function addComment($recipe)
     {
         $data = array(
@@ -25,6 +30,12 @@ class Comment_model extends CI_Model {
         );
         $this->db->insert($recipe.'_comment', $data);
         return $this->db->insert_id();
+    }
+
+    public function retrieveComment($recipe){
+
+        return $this->db->get($recipe.'_comment')->result();
+
     }
 
 
