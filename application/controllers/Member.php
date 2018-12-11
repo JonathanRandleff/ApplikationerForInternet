@@ -50,8 +50,6 @@ class Member extends CI_Controller {
             $this->user->setPassword($password);
             // insert values in database
             $this->user->createUser();
-            redirect(base_url()."member");
-
         }
     }
     public function login()
@@ -89,9 +87,8 @@ class Member extends CI_Controller {
                     $this->session->set_userdata($sessArray);
                     $this->session->set_userdata('username',$username);
                 }
-                redirect('member/view/member');
             } else {
-                redirect('member?msg=1');
+                header('HTTP/1.1 500 Internal Server Error');
             }
         }
     }
@@ -103,6 +100,5 @@ class Member extends CI_Controller {
         $this->session->sess_destroy();
         $this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
-        redirect('member');
     }
 }

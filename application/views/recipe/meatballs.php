@@ -1,21 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-AU">
-<head>
-    <title>Tasty Recipes - Meatballs Recipe</title>
-    <meta http-equiv="content-type" content="application/xhtml; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="/assets/css/recipe.css"/>
-    <link rel="stylesheet" type="text/css" href="/assets/css/css.css"/>
-
-</head>
-
+<html>
 <body>
-
-
-
-<!--Content-->
 <div class="content recipe">
     <h2>
         <?php echo $recipe->recipe[0]->title; ?>
@@ -48,13 +32,13 @@
     <h2>Comments:</h2>
 
     <?php echo validation_errors(); ?>
-    <?php echo form_open('recipe/createComment'); ?>
+    <?php echo form_open('recipe/createComment', array('id' => 'commentForm', 'name' => 'meatballs')); ?>
 
     <?php
     if ($this->session->userdata('is_authenticated') == TRUE) {
         echo '
     <div class="form-comments">
-        <input type="text" placeholder="Write comment here..." name="comment_text" required>
+        <input type="comment" placeholder="Write comment here..." name="comment_text" required>
         <input type="hidden" name="recipe" value="meatballs">
 
         <button type="submit">Submit</button>
@@ -73,11 +57,11 @@
             echo $comment->comment_text;
             if ($comment->username === $this->session->userdata('username')) {
                 $id = $comment->id;
-                echo form_open('recipe/deleteComment').'
-            <input type="hidden" name="id" value="'.$id.'">
-            <input type="hidden" name="page" value="meatballs">
-            <input type="submit" class="delete" name="button" value="Delete"/>
-            </form>';
+                $array = array('class' => 'deleteCommentForm' , 'id' => $id, 'name' => "meatballs");
+                echo form_open('recipe/deletedComment', $array).'
+            <button type="submit" class="delete">Delete</button>
+            ';
+               echo form_close();
             }
             echo "<br />";
         }

@@ -41,7 +41,7 @@
     font-family: Verdana, arial;
 
 }
-input[type=text] {
+input[type=comment] {
     width: 100%;
     height: 68px;
     padding: 12px 20px;
@@ -59,6 +59,12 @@ button {
     cursor: pointer;
 }
 .delete {
+    background-color: white;
+    color: initial;
+    padding: 1px 1px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
     font-size: 0.7em;
     width: 8%;
 }
