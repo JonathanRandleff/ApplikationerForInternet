@@ -49,25 +49,16 @@
         echo 'You have to be logged in to write comments';
     }
     ?>
-
-    <div class="comments">
-        <?php
-        foreach($comment as $comment) {
-            echo "<p style='color:#F26F29;'>".$comment->username."</p>";
-            echo $comment->comment_text;
-            if ($comment->username === $this->session->userdata('username')) {
-                $id = $comment->id;
-                $array = array('class' => 'deleteCommentForm' , 'id' => $id, 'name' => "meatballs");
-                echo form_open('recipe/deletedComment', $array).'
-            <button type="submit" class="delete">Delete</button>
-            ';
-               echo form_close();
-            }
-            echo "<br />";
-        }
-        ?>
+    <div class="comments" id="comments">
     </div>
 </div>
 </div>
 </body>
 </html>
+<script>
+    $(document).ready(function() {
+        var comments = <?php print $comment; ?>;
+        var recipe = "meatballs";
+        window.onload = getComments(comments, recipe);
+    });
+</script>

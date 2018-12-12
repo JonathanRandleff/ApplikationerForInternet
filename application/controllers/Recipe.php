@@ -13,7 +13,8 @@ class Recipe extends CI_Controller {
             show_404();
         }
         $data['recipe'] = $this->recipe->retrieveRecipe();
-        $data['comment'] = $this->recipe->retrieveComment($page);
+        $data['comment'] = json_encode($this->recipe->retrieveComment($page));
+
         $this->load->view('templates/header', $data);
         $this->load->view('recipe/'.$page, $data);
     }
@@ -21,9 +22,7 @@ class Recipe extends CI_Controller {
     public function deleteComment() {
         $id = htmlentities($this->input->post('id'), ENT_QUOTES);
         $page = htmlentities($this->input->post('page'), ENT_QUOTES);
-
         $this->recipe->deleteComment($page, $id);
-        redirect(base_url().'recipe/view/'.$page);
     }
 
 
@@ -41,9 +40,7 @@ class Recipe extends CI_Controller {
 
             $this->recipe->setUsername($username);
             $this->recipe->setCommentText($comment_text);
-
             $this->recipe->addComment($recipe);
-            redirect(base_url().'recipe/view/'.$recipe);
         }
     }
 }

@@ -58,11 +58,11 @@ button {
     border: none;
     cursor: pointer;
 }
-.delete {
+button.deleteButton {
     background-color: white;
     color: initial;
     padding: 1px 1px;
-    margin: 0;
+    margin: 5px;
     border: none;
     cursor: pointer;
     font-size: 0.7em;

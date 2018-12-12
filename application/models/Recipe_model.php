@@ -18,7 +18,18 @@ class Recipe_model extends CI_Model {
 
 
     public function deleteComment($recipe, $comment_id) {
-        $this->db->delete($recipe.'_comment', array('id' => $comment_id));
+        $this->db->select('username');
+        $this->db->from($recipe.'_comment');
+        $this->db->where('id', $comment_id);
+        $this->db->limit(1);
+        $username = $this->db->get()->row()->username;
+
+        if ($username === $this->session->userdata('username')) {
+            $this->db->delete($recipe.'_comment', array('id' => $comment_id));
+        }
+        else {
+            header('HTTP/1.1 500 Internal Server Error');
+        }
     }
 
 
