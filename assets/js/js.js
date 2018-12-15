@@ -1,3 +1,9 @@
+function getNewComments(recipeName) {
+    $.getJSON('/recipe/getComments/' + recipeName, function(comment) {
+        document.getElementById("comments").innerHTML = "";
+        getComments(comment, recipeName);
+    });
+}
 function getComments(comment, recipe) {
     $.getJSON('/member/getUsername', function(data) {
         for (var key in comment) {
@@ -24,8 +30,7 @@ function getComments(comment, recipe) {
                         data: data,
                         type: "POST",
                         success: function () {
-                            //alert("Comment removed");
-                            window.location = "/recipe/view/"+recipeName;
+                            getNewComments(recipeName);
                         },
                     });
                     return false;
@@ -75,8 +80,7 @@ $(document).ready(function() {
             data: data,
             type: "POST",
             success: function () {
-                //alert("Comment added");
-                window.location = "/recipe/view/"+recipeName;
+                getNewComments(recipeName);
             },
         });
         return false;
@@ -88,5 +92,6 @@ $(document).ready(function() {
                 window.location.href = data;
             }
         });
+        return false;
     });
 });

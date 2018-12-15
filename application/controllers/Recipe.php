@@ -19,6 +19,11 @@ class Recipe extends CI_Controller {
         $this->load->view('recipe/'.$page, $data);
     }
 
+    public function getComments($page) {
+        $comment = json_encode($this->recipe->retrieveComment($page));
+        echo $comment;
+    }
+
     public function deleteComment() {
         $id = htmlentities($this->input->post('id'), ENT_QUOTES);
         $page = htmlentities($this->input->post('page'), ENT_QUOTES);
